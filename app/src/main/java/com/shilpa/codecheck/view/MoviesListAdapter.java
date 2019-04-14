@@ -15,8 +15,8 @@ import com.shilpa.codecheck.view.util.FavouriteMoviesUtil;
 
 import java.util.List;
 
-import static com.shilpa.codecheck.common.constants.MOVIE_RATING;
-import static com.shilpa.codecheck.common.constants.MOVIE_RELEASE_DATE;
+import static com.shilpa.codecheck.common.Constants.MOVIE_RATING;
+import static com.shilpa.codecheck.common.Constants.MOVIE_RELEASE_DATE;
 
 public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.MoviesListViewholder> {
 

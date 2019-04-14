@@ -18,7 +18,7 @@ import com.shilpa.codecheck.viewmodel.MoviesListViewModelFactory;
 
 import java.util.List;
 
-import static com.shilpa.codecheck.common.constants.MOVIE_INFO_PARCELABLE;
+import static com.shilpa.codecheck.common.Constants.MOVIE_INFO_PARCELABLE;
 
 public class MoviesListActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;

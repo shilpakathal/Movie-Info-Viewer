@@ -24,6 +24,9 @@ public class FavouriteMoviesUtil {
         sharedpreferences = context.getSharedPreferences(FAVOURITES_SP_FILE, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedpreferences.edit();
 
+        favouriteMovieIds = sharedpreferences.getStringSet(FAVOURITE_MOVIES_SP, null);
+        favouriteMovieIds = new HashSet<String>(favouriteMovieIds);
+
         if (favouriteMovieIds == null) {
             favouriteMovieIds = new HashSet<String>();
         }

@@ -6,9 +6,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import com.shilpa.codecheck.R;
-import com.shilpa.codecheck.common.constants;
+import com.shilpa.codecheck.common.Constants;
 import com.shilpa.codecheck.repository.model.MovieInfo;
-import static com.shilpa.codecheck.common.constants.MOVIE_INFO_PARCELABLE;
+import static com.shilpa.codecheck.common.Constants.MOVIE_INFO_PARCELABLE;
 
 class MoviesDetailActivity extends AppCompatActivity {
 
@@ -38,9 +38,9 @@ class MoviesDetailActivity extends AppCompatActivity {
     private void loadMoviesDetail(MovieInfo mMovieInfo) {
 
         if (mMovieInfo != null) {
-            mMovieDesc.setText(constants.MOVIE_DESC + mMovieInfo.getDescription());
-            mMovieDirector.setText(constants.MOVIE_DIRECTOR + mMovieInfo.getDirector());
-            mMoviewReleaseDate.setText(constants.MOVIE_RELEASE_DATE + mMovieInfo.getReleaseDate());
+            mMovieDesc.setText(Constants.MOVIE_DESC + mMovieInfo.getDescription());
+            mMovieDirector.setText(Constants.MOVIE_DIRECTOR + mMovieInfo.getDirector());
+            mMoviewReleaseDate.setText(Constants.MOVIE_RELEASE_DATE + mMovieInfo.getReleaseDate());
         }
     }
 

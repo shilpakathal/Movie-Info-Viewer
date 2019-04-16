@@ -13,7 +13,7 @@ public class FavouriteMoviesUtil {
     private static final String FAVOURITE_MOVIES_SP = "Favourite_movies";
     private Context context;
     private SharedPreferences sharedpreferences;
-    private Set<String> favouriteMovieIds = new HashSet<String>();
+    private Set<String> favouriteMovieIds;
 
     public FavouriteMoviesUtil(Context context) {
         this.context = context;
@@ -25,10 +25,12 @@ public class FavouriteMoviesUtil {
         SharedPreferences.Editor editor = sharedpreferences.edit();
 
         favouriteMovieIds = sharedpreferences.getStringSet(FAVOURITE_MOVIES_SP, null);
-        favouriteMovieIds = new HashSet<String>(favouriteMovieIds);
 
         if (favouriteMovieIds == null) {
             favouriteMovieIds = new HashSet<String>();
+        }
+        else {
+            favouriteMovieIds = new HashSet<String>(favouriteMovieIds);
         }
         Log.d("##Writing to SP", movieId);
         favouriteMovieIds.add(movieId);
@@ -60,6 +62,7 @@ public class FavouriteMoviesUtil {
         favouriteMovieIds = sharedpreferences.getStringSet(FAVOURITE_MOVIES_SP, null);
 
         if (favouriteMovieIds != null) {
+            favouriteMovieIds = new HashSet<String>(favouriteMovieIds);
             if (favouriteMovieIds.contains(movieID)) {
                 favouriteMovieIds.remove(movieID);
                 editor.putStringSet(FAVOURITE_MOVIES_SP, favouriteMovieIds);
